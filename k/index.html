@@ -1,101 +1,97 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>付款码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+      /* 设置整个页面背景为透明浅蓝色 */
       body {
+        background-color: rgba(135, 206, 235, 0.2);
         margin: 0;
         padding: 0;
-        background-color: #f2f2f2; /* 设置背景为透明浅灰色 */
       }
       
-      /* 设置名片样式 */
+      /* 设置名片框样式 */
       .card {
-        background-color: rgba(255, 255, 255, 0.8); /* 设置透明度为0.8的白色背景 */
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 设置阴影效果 */
-        position: relative;
-        z-index: 1; /* 设置层级为1，让名片浮在付款码上面 */
-        text-align: center; /* 居中文本 */
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        margin: 10px auto;
+        max-width: 90%;
+        padding: 10px;
+        text-align: center;
       }
-      
+
       /* 设置名片头像样式 */
       .card img {
-        max-width: 100%; /* 设置图片最大宽度为100% */
-        height: auto; /* 让高度自适应宽度 */
-        border-radius: 50%; /* 设置圆形边框 */
+        border-radius: 50%;
+        height: auto;
+        max-width: 80px;
       }
-      
-      /* 设置付款码样式 */
-      .payment-code {
-        margin: auto; /* 居中元素 */
-        display: flex; /* 设置弹性布局 */
-        justify-content: center; /* 水平居中 */
-        align-items: center; /* 垂直居中 */
+
+      /* 设置付款码框样式 */
+      .payment {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        margin: 10px auto;
+        max-width: 90%;
+        padding: 10px;
+        text-align: center;
       }
-      
-      /* 设置支付宝付款码样式 */
-      .alipay {
-        margin-right: 20px; /* 设置与微信码之间的间距 */
-      }
-      
-      /* 设置背景框样式 */
-      .background-box {
-        position: absolute; /* 设置绝对定位 */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1; /* 将背景框层级设为-1，使其在名片和付款码下面 */
-        background-color: rgba(255, 192, 203, 0.5); /* 设置透明框架的背景为透明粉色 */
-      }
-      
-      /* 设置个人说明样式 */
-      .description {
-        margin-top: 20px; /* 设置与名片的间距 */
-        font-size: 16px;
-        line-height: 1.5;
-      }
-      
-      /* 设置手机适配 */
-      @media screen and (max-width: 600px) {
-        .card {
-          margin: 0 20px; /* 去掉名片左右的空白 */
-        }
+
+      /* 设置付款码图片样式 */
+      .payment img {
+        max-width: 100%;
+        height: auto;
       }
     </style>
   </head>
-  <body>
-    <!-- 顶部名片 -->
-    <div class="card">
-     
-      <h1>kktz - 个人收款</h1>
-      <p>关注快手：chatgpt_      关注抖音：chatgpt__</p>
-    </div>
-      <title>付款码页面</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="card">
+    <div class="card">    
+<h1>kktz - 个人收款</h1>
+<p>关注快手：chatgpt_ <p>关注抖音：chatgpt__</p>
 
-        <img class="avatar" src="img/k.jpg" alt="头像">
-        <p class="description">请扫码并联系右下角咨询</p>
-      </div>
-      <div class="payment-codes">
-        <div class="payment-code">
-          <img src="img/z.jpg" alt="支付宝">
-          <p>支付宝</p>
-        </div>
-        <div class="payment-code">
-          <img src="img/w.jpg" alt="微信">
-          <p>微信</p>
-        </div>
-      </div>
     </div>
-    <script src="script.js"></script>
+    <div class="card">    
+
+  <img src="img/k.jpg" alt="Profile Picture">
+
+      <p>付款后点击右下角咨询</p>
+    </div>
+
+
+    <div class="payment">
+      <h2>支付宝付款码</h2>
+      <img id="alipay-code" src="img/z.png" alt="支付宝付款码">
+    </div>
+
+    <div class="payment">
+      <h2>微信付款码</h2>
+      <img id="wechat-code" src="img/w.png" alt="微信付款码">
+    </div>
+
+    <script>
+      // 使用JavaScript动态设置付款码的大小
+      var paymentImages = document.querySelectorAll('.payment img');
+      paymentImages.forEach(function(image) {
+        image.onload = function() {
+          var width = image.clientWidth;
+          var height = image.clientHeight;
+          if (width > height) {
+            image.style.width = "80%";
+            image.style.height = "auto";
+          } else {
+            image.style.height = "80%";
+            image.style.width = "auto";
+          }
+        };
+      });
+    </script>
+  </body>
+
+
+
+
+
+
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="04e29698-199b-440e-a13f-34083199b231";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
- 
  <script type="text/javascript">
         var plaaaay = function(id) {
     $('#' + id)[0].play();
@@ -184,5 +180,4 @@ $.message({
 
 
 
- </body>
 </html>
