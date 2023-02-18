@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>付款码</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2; /* 设置背景为透明浅灰色 */
+      }
+      
+      /* 设置名片样式 */
+      .card {
+        background-color: rgba(255, 255, 255, 0.8); /* 设置透明度为0.8的白色背景 */
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 设置阴影效果 */
+        position: relative;
+        z-index: 1; /* 设置层级为1，让名片浮在付款码上面 */
+        text-align: center; /* 居中文本 */
+      }
+      
+      /* 设置名片头像样式 */
+      .card img {
+        max-width: 100%; /* 设置图片最大宽度为100% */
+        height: auto; /* 让高度自适应宽度 */
+        border-radius: 50%; /* 设置圆形边框 */
+      }
+      
+      /* 设置付款码样式 */
+      .payment-code {
+        margin: auto; /* 居中元素 */
+        display: flex; /* 设置弹性布局 */
+        justify-content: center; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+      }
+      
+      /* 设置支付宝付款码样式 */
+      .alipay {
+        margin-right: 20px; /* 设置与微信码之间的间距 */
+      }
+      
+      /* 设置背景框样式 */
+      .background-box {
+        position: absolute; /* 设置绝对定位 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* 将背景框层级设为-1，使其在名片和付款码下面 */
+        background-color: rgba(255, 192, 203, 0.5); /* 设置透明框架的背景为透明粉色 */
+      }
+      
+      /* 设置个人说明样式 */
+      .description {
+        margin-top: 20px; /* 设置与名片的间距 */
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      
+      /* 设置手机适配 */
+      @media screen and (max-width: 600px) {
+        .card {
+          margin: 0 20px; /* 去掉名片左右的空白 */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 顶部名片 -->
+    <div class="card">
+     
+      <h1>kktz - 个人收款</h1>
+      <p>关注快手：chatgpt_      关注抖音：chatgpt__</p>
+    </div>
+      <title>付款码页面</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+
+        <img class="avatar" src="img/k.jpg" alt="头像">
+        <p class="description">请扫码并联系右下角咨询</p>
+      </div>
+      <div class="payment-codes">
+        <div class="payment-code">
+          <img src="img/z.jpg" alt="支付宝">
+          <p>支付宝</p>
+        </div>
+        <div class="payment-code">
+          <img src="img/w.jpg" alt="微信">
+          <p>微信</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
